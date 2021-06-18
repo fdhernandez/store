@@ -6,7 +6,7 @@ export default function Home ({products}) {
         <div id="home" className="Home">
             <div className="store-card">
                 <div className="store-card-div">
-                    <h2>Green Paradise Store</h2>
+                    <h2>🍃 Green Paradise Store </h2>
                           
                 </div>
             </div>
