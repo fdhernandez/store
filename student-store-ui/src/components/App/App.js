@@ -1,11 +1,11 @@
 
-import './App.css';
+import './App.css'
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import axios from 'axios'
 import Navbar from '../Navbar/Navbar'
 import Home from '../Home/Home'
-import StoreProducts from '../StoreProducts/StoreProducts'
+//import StoreProducts from '../StoreProducts/StoreProducts'
 import ProductDetails from '../ProductDetails/ProductDetails'
 
 function App() {

@@ -63,6 +63,14 @@ class Store {
             productRows,
         }
     }
+
+    static async fetchId(productId) {
+        const product = storage
+            .get("products")
+            .find({id: Number(productId)})
+            .value()
+        return product
+    }
 }
 
 
