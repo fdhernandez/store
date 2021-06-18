@@ -33,7 +33,11 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home products={products}/>}></Route>
+          <Route path="/" element={
+            <Home 
+              products={products}
+              error = {error}
+            />}></Route>
           <Route path="/store/:productId" element={<ProductDetails/>}/>
         </Routes>
       </BrowserRouter>

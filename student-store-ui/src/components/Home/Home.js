@@ -6,12 +6,13 @@ export default function Home ({products}) {
         <div id="home" className="Home">
             <div className="store-card">
                 <div className="store-card-div">
-                    <h1>Thank You for Shopping With Us!!</h1>        
+                    <h2>Green Paradise Store</h2>
+                          
                 </div>
             </div>
 
             <div id ="store">
-                <h1>Store</h1>
+            <h1>Thank you for choosing Green Paradise Store for all your plant needs.</h1>
                 <StoreProducts products = {products}/>
             </div>
         </div>

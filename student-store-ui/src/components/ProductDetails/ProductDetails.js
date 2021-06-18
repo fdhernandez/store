@@ -6,9 +6,11 @@ export default function ProductDetails() {
     const {productId} = useParams()
     const [product, setProduct] = useState([])
     const [error, setError] = useState()
+    const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
         const fetchId = async () => {
+            setIsLoading(true)
             try {
                 const res = await axios.get(`http://localhost:3001/store/${productId}`)
                 const product = res?.data?.product
@@ -22,7 +24,12 @@ export default function ProductDetails() {
         fetchId()
     },[productId])
 
+    const renderProductDetails = () => {
+        if (isLoading) return <h1>Product Petails</h1>
+        if (error) return <p className="description">No product found</p>
+    }
     return (
+        <div className = "ProductDetails">
         <div className = "product-card">
             <div className = "product-img">
                 <img src={product.image} alt={product.name}/>
@@ -31,7 +38,8 @@ export default function ProductDetails() {
             <div className="product-name">{product.name}</div>
             <div className="product-price">{product.price}</div>
             <div className="product-desc">{product.description}</div>
+            {renderProductDetails()}
+        </div>
         </div>
     )
-
 }

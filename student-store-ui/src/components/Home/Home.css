@@ -1,0 +1,39 @@
+.Home {
+    background: #FFFFFF;
+  }
+  .Home > div {
+    padding: 30px;
+
+  }
+
+  h2 {
+    position: absolute;
+    width: 690.67px;
+    height: 120px;
+    left: 30px;
+    top:25px;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 121px;
+    letter-spacing: 0.10em;
+    padding : 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+    line-height: 49px;
+    text-align: center;
+    color:#7e6b6b;
+    
+  }
+  
+  .shop-card {
+    width: 80%;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #13AA52;
+   
+  }

@@ -1,4 +1,4 @@
-const {storage} = require("../store data/storage")
+const {storage} = require("../data/storage")
 const { BadRequestError } = require("../utils/errorhandling")
 
 class Store {
@@ -52,8 +52,8 @@ class Store {
             `\n\n`,
             ...productRows.map (
             (product) => 
-                `${product.quantity} total ${product.name} with a cost of ${product.price}
-                with a total cost of ${product.priceTotal}`
+                `${product.quantity} total ${product.name} with a cost of ${priceFormat(product.price)}
+                with a total cost of ${priceFormat(product.priceTotal)}`
             ),
             `Your total for today is ${total}`,  
         ]
@@ -73,6 +73,14 @@ class Store {
     }
 }
 
-
+const formatter = new Intl.NumberFormat("en-US", {
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })
+  
+  const priceFormat = (amount) => {
+    return `$${formatter.format(amount)}`
+  }
 
 module.exports = Store
