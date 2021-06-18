@@ -35,15 +35,15 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+- The lab we did on Wednesday was a great help in the assignment as it consisted of the same consepts regarding the backend creating the api and endpoints and the frontend being able to route and link the api to call the functions and display our array of products. I was unprepared to do the shopping cart element in the assignment as I still had trouble wrapping my head around the concept. 
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+- If I had more time I would have implemented the stretch features. I was able to write code for the shopping cart and receipt information for the user but I did not finish implementing it correctly. I would also have liked to add accesibility features in the application to make it more user friendly to all users. 
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+- After a lot of struggling I was able to implement my array function to display the products into the main page and took time to make it look appealing for the user. However, when displaying the product details, my css does not look the best. My peers presented some amazing looking projects that inspired me to try out different styling features. 
 
 ### Open-source libraries used
 
@@ -54,4 +54,4 @@ https://www.sitepoint.com/how-to-create-an-ecommerce-site-with-react/
 
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
-- The intructors and TA were a major help with the many errors I kept dealing with. At some point, Paige and Raahima both came into my breakout room to help me fix an error that I could not find. 
+- The intructors and TA were a major help with the many errors I kept dealing with. At some point, Paige, Elie and Raahima came into my breakout room to help me fix an error that I could not find. 
