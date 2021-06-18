@@ -1,12 +1,13 @@
 .product-card {
-    align-content: center;
+    justify-content: center;
     display:flex; 
+    flex: column;
+
 }
 
 .product-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    display: flex;
+    justify-content: center;
+    display:flex; 
+    align-items: center;
 }
 
