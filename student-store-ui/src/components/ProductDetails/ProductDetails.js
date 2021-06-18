@@ -28,6 +28,16 @@ export default function ProductDetails() {
         if (isLoading) return <h1>Product Petails</h1>
         if (error) return <p className="description">No product found</p>
     }
+    const formatter = new Intl.NumberFormat("en-US", {
+        currency: "USD",
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      })
+      
+    const priceFormat = (amount) => {
+        return `$${formatter.format(amount)}`
+      }
+
     return (
         <div className = "ProductDetails">
         <div className = "product-card">
@@ -36,7 +46,7 @@ export default function ProductDetails() {
             </div>
             <div className="product-category">{product.category}</div>
             <div className="product-name">{product.name}</div>
-            <div className="product-price">{product.price}</div>
+            <div className="product-price">{priceFormat(product.price)}</div>
             <div className="product-desc">{product.description}</div>
             {renderProductDetails()}
         </div>

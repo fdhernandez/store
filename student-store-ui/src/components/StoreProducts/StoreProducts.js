@@ -1,7 +1,17 @@
 import './StoreProducts.css'
 import { Link } from 'react-router-dom'
 
+
 export default function StoreProducts ({products}) {
+  const formatter = new Intl.NumberFormat("en-US", {
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })
+  
+  const priceFormat = (amount) => {
+    return `$${formatter.format(amount)}`
+  }
     return (
         <div className="StoreProducts">
             {products.map((item) => (
@@ -13,7 +23,7 @@ export default function StoreProducts ({products}) {
                 </div>
                 <div className="product-category">{item.category}</div>
                 <div className="product-name">{item.name}</div>
-                <div className="product-price">{item.price}</div>
+                <div className="product-price">{priceFormat(item.price)}</div>
             </div>
           </Link>
         ))}

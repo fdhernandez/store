@@ -79,7 +79,7 @@ const formatter = new Intl.NumberFormat("en-US", {
     maximumFractionDigits: 2,
   })
   
-  const priceFormat = (amount) => {
+export const priceFormat = (amount) => {
     return `$${formatter.format(amount)}`
   }
 
