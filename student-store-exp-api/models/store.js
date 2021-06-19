@@ -7,7 +7,7 @@ class Store {
       return productsStore
     }
 
-    static async buyProducts(cart, userInfo) {
+    static async createBill(cart, userInfo) {
         if (!cart) {
             throw new BadRequestError(`No cart was found.`)
         }
@@ -15,23 +15,51 @@ class Store {
             throw new BadRequestError(`There is no user info found.`)
         }
         const products = storage.get("products").value()
-        const total = Store.calculateTotal(cart, products)
+        var buyProducts = []
+        var total = 0
 
-        const bill = Store.getBill({cart, total, products, userInfo})
-
-        const purchase ={
-            name: userInfo.name,
-            email: userInfo.email,
-            total,
-            bill,
+        for (const [key,value] of Object.entries(cart)) {
+            products.forEach((item, index) => {
+                if (item.name==key) {
+                    buyProducts.push(item)
+                    total += (item.price * value)
+                } else {
+                    if (index == products.length) {
+                        return new BadRequestError(`No ${key} in the store`)
+                    }
+                }
+                
+            })
         }
-        
-        storage.get("purchases").push(purchase).write()
-        return purchase;
+        total = priceFormat(total)
+        const newPurchase = { name: userInfo.name, 
+        email: userInfo.email,
+        total: total, 
+        bill : {userInfo: userInfo}, 
+        productRows: buyProducts
+        }
+        storage.get("orders").push(newPurchase).write()
+        return newPurchase;
     }
 
+    static async createProduct(product) {
+        if (!product) {
+            throw new BadRequestError('No product created!')
+        }
+        const fieldsReq = ["name", "category", "image", "source", "description", "price"]
+        fieldsReq.forEach((field) => {
+            if (!product[field] && product[field] !== 0) {
+                throw new BadRequestError(`You need to include ${field}`)
+            }
+        })
+        const products = await Store.productList()
+        const productId = products.length + 1
+        const newProduct = { id : productId, ...product}
+        storage.get("products").push(newProduct).write()
+        return newProduct
 
-    static createBill({cart, total, products, userInfo}) {
+    }
+   /*  static createBill({cart, total, products, userInfo}) {
         const productMap = products.reduce((acc, item) => {
             acc[item.name] = item
             return acc
@@ -62,7 +90,8 @@ class Store {
             lines: billFormat,
             productRows,
         }
-    }
+    } 
+    */
 
     static async fetchId(productId) {
         const product = storage

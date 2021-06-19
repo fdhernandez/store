@@ -2,11 +2,12 @@ const express = require("express")
 const Store = require("../models/store")
 const router = express.Router()
 const {  NotFoundError } = require("../utils/errorhandling")
+const {createBill} = require.("../models/store")
 
 router.get("/", async (req, res, next) => {
   try {
-    const products = await Store.productList()
-    res.status(200).json({ products })
+    const list = await Store.productList()
+    res.status(200).json({ products: list })
   } catch (err) {
     next(err)
   }
@@ -16,8 +17,8 @@ router.post("/", async (req, res, next) => {
   try {
     const cart = req.body.cart
     const userInfo = req.body.userInfo
-    const purchase = await Store.buyProducts(cart, userInfo)
-    res.status(200).json({ purchase, cart })
+    const bill = await Store.createBill(cart, userInfo)
+    res.status(200).json(bill)
   } catch (err) {
     next(err)
   }
@@ -31,6 +32,16 @@ router.get("/:productId", async (req, res, next) => {
       throw new NotFoundError("Product not found")
     }
     res.status(200).json({ product })
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.post("/newItem", async (req, res, next) => {
+  try {
+    const product = req.body.product
+    const newProduct = await Store.createProduct(product)
+    res.status(201).json(newProduct)
   } catch (err) {
     next(err)
   }

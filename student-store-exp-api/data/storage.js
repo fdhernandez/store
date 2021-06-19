@@ -11,7 +11,7 @@ class Storage {
   async setup() {
     const adapter = new FileSync(this.path)
     this.productdata = lowdb(adapter)
-    this.productdata.defaults({ purchases: [], products: [] }).write()
+    this.productdata.defaults({ purchases: [] }).write()
   }
 
   set(key, value) {

@@ -91,5 +91,28 @@
       "price": 7.99
     }
   ],
-  "purchases": []
+  "purchases": [
+    {
+      "name": "Flor",
+      "email": "@codepath.org",
+      "total": "7.99",
+      "bill": {
+        "userinfo": {
+          "name": "Flor",
+          "email": "@codepath.org"
+        }
+    },
+      "productRows": [
+    {
+      "id": 10,
+      "name": "Garden Safe Houseplant and Garden Insect Killer",
+      "category": "pest control",
+      "image": "https://i5.walmartimages.com/asr/41816f4e-331f-45fa-a0a0-0bb591c6aa80.f22e49cc042059e73e0e6874d856b682.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff",
+      "source": "https://www.amazon.com/Garden-Safe-Houseplant-Insect-24-Ounce/dp/B000LNWJXW/ref=pb_allspark_dp_session_sims_pao_desktop_4/138-2411084-9093828?pd_rd_w=LSsuG&pf_rd_p=3ac2ce50-9d75-4bd3-868d-72b252a0623c&pf_rd_r=R5KXXVK5CJYJ2ZB607PR&pd_rd_r=eb2c57c6-45c9-42f3-bc97-44aa08b2f0ee&pd_rd_wg=3woLD&pd_rd_i=B000LNWJXW&psc=1",
+      "description": "Garden Safe Brand Houseplant & Garden Insect Killer contains botanical insecticides for a ready-to-use pest control solution that protects your whole garden. Use it on roses, vegetables, houseplants, ornamentals, trees, shrubs and flowers to kill listed insects on contact. Use it right up to the day of harvest. Garden Safe Brand Houseplant & Garden Insect Killer can be used both indoors and outdoors and in home greenhouses throughout the growing season. ",
+      "price": 7.99
+    }
+      ]
+  }
+  ]
 }
