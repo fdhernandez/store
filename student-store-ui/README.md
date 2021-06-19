@@ -27,13 +27,14 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 ### Walkthrough Video
 
 Frontend: 
-<iframe src="https://giphy.com/embed/wa0WcUkCcztUOzjHHf" width="480" height="287" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/wa0WcUkCcztUOzjHHf">via GIPHY</a></p>
-https://media.giphy.com/media/wa0WcUkCcztUOzjHHf/giphy.gif 
+https://www.loom.com/share/07619be6fc96438b87a875d424970e62
+<div style="position: relative; padding-bottom: 61.257861635220124%; height: 0;"><iframe src="https://www.loom.com/embed/07619be6fc96438b87a875d424970e62" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 Insomnia/ Backend:
-<iframe src="https://giphy.com/embed/RLPh41DKAIIjaQBgYR" width="480" height="287" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/RLPh41DKAIIjaQBgYR">via GIPHY</a></p>
-https://media.giphy.com/media/RLPh41DKAIIjaQBgYR/giphy.gif
 
+https://www.loom.com/share/472afbdc09a64de191e97fca98e7b00b 
+
+<div style="position: relative; padding-bottom: 55.52631578947369%; height: 0;"><iframe src="https://www.loom.com/embed/472afbdc09a64de191e97fca98e7b00b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 
 
