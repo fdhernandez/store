@@ -58,6 +58,22 @@ class Store {
         storage.get("products").push(newProduct).write()
         return newProduct
 
+        const billFormat = [
+            `This is your receipt  for ${userInfo.name}, sent to ${userInfo.email}:`,
+            `\n\n`,
+            ...productRows.map (
+            (product) => 
+                `${product.quantity} total ${product.name} with a cost of ${priceFormat(product.price)}
+                with a total cost of ${priceFormat(product.priceTotal)}`
+            ),
+            `Your total for today is ${total}`,  
+        ]
+        return {
+            
+            lines: billFormat,
+        
+        }
+
     }
    /*  static createBill({cart, total, products, userInfo}) {
         const productMap = products.reduce((acc, item) => {

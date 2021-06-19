@@ -1,10 +1,10 @@
 .Sidebar {
-    position:absolute;
-    top: 100px;
+    position:fixed;
+    
     display: flex;
     flex-direction:row;
 
-    height: 30%;
+    height: 100%;
     background: #d8d0c9;
     padding: 5px;
   }
