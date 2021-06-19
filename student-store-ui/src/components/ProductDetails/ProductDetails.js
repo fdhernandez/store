@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { useParams } from "react-router-dom"
+import './ProductDetails.css'
 
 export default function ProductDetails() {
     const {productId} = useParams()

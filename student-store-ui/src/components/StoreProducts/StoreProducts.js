@@ -1,6 +1,6 @@
 import './StoreProducts.css'
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+//import { useState } from 'react'
 
 import Sidebar from '../Sidebar/Sidebar'
 
@@ -16,7 +16,7 @@ export default function StoreProducts ({products, cartCallback}) {
     return `$${formatter.format(amount)}`
   }
 
-  const [cart, setCart] = useState([])
+  //`const [cart, setCart] = useState([])
 
   const handleIncrement = (event) => {
     const itemId = event.target.name

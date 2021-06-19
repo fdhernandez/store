@@ -1,10 +1,10 @@
 import axios from 'axios'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './Sidebar.css'
 
 export default function Sidebar( { cart = [], open = false } ) {
   console.log(cart)
-  const [cartItems, setCart] = useState(cart)
+  //const [cartItems, setCart] = useState(cart)
   const [isOpen, setIsOpen] = useState(open)
   const [products, setProducts] = useState([])
   const handleOnClick = () => {
@@ -15,7 +15,7 @@ export default function Sidebar( { cart = [], open = false } ) {
     }
     try {
       cart.forEach(async (item, index) => {
-        console.log(item)
+        
         const res = await axios.get(`http://localhost:3001/store/${item.id}`)
         const product = res?.data?.product
         const quantity = item.quantity
