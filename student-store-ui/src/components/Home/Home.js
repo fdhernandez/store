@@ -1,7 +1,7 @@
 import './Home.css'
 import StoreProducts from '../StoreProducts/StoreProducts'
 
-export default function Home ({products}) {
+export default function Home ({products, cartCallback}) {
     return (
         <div id="home" className="Home">
             <div className="store-card">
@@ -13,7 +13,7 @@ export default function Home ({products}) {
 
             <div id ="store">
             <h1>Thank you for choosing Green Paradise Store for all your plant needs.</h1>
-                <StoreProducts products = {products}/>
+                <StoreProducts products = {products} cartCallback = {cartCallback}/>
             </div>
         </div>
     )

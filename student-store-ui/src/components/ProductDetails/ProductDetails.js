@@ -38,17 +38,29 @@ export default function ProductDetails() {
         return `$${formatter.format(amount)}`
       }
 
+    const handleIncrement = () => {
+      }
+  
+    const handleDecrement = () => {
+    }
+
     return (
         <div className = "ProductDetails">
         <div className = "product-card">
             <div className = "product-img">
                 <img src={product.image} alt={product.name}/>
             </div>
+            <div className = "product-details">
+                <div className = "cartadd-btns">
+                    <button onClick={handleIncrement}>–</button>
+                    <button onClick={handleDecrement}>+</button>
+                </div>
             <div className="product-category">{product.category}</div>
             <div className="product-name">{product.name}</div>
             <div className="product-price">{priceFormat(product.price)}</div>
             <div className="product-desc">{product.description}</div>
             {renderProductDetails()}
+            </div>
         </div>
         </div>
     )

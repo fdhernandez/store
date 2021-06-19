@@ -1,0 +1,41 @@
+.Sidebar {
+    position:absolute;
+    top: 500px;
+    display: flex;
+    flex-direction:row;
+
+    height: 30%;
+    background: #d8d0c9;
+    padding: 5px;
+  }
+  .sidebar-title {
+    margin: 20px;
+    font-size: 30px;
+    color: #fff;
+  }
+  table {
+    background: #c4c1bd;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  tr {
+    background: rgba(131, 224, 170, 0.8);
+  }
+  th {
+    padding: 3px 10px;
+  }
+  
+  .open {
+    width: 300px;
+  }
+  .close {
+    display: none;
+    width: 20px;
+  }
+  .sidebar-btn {
+    font-size: 20px;
+    font-weight: 1000px;
+    background: transparent;
+    border: none;
+    color: #fff;
+  }
