@@ -26,9 +26,15 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-`<iframe src="https://giphy.com/embed/VupNJSYArvQjIsDnoj" width="480" height="278" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/VupNJSYArvQjIsDnoj">via GIPHY</a></p>`
+Frontend: 
+<iframe src="https://giphy.com/embed/wa0WcUkCcztUOzjHHf" width="480" height="287" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/wa0WcUkCcztUOzjHHf">via GIPHY</a></p>
+https://media.giphy.com/media/wa0WcUkCcztUOzjHHf/giphy.gif 
 
-`https://media.giphy.com/media/VupNJSYArvQjIsDnoj/giphy.gif`
+Insomnia/ Backend:
+<iframe src="https://giphy.com/embed/RLPh41DKAIIjaQBgYR" width="480" height="287" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/RLPh41DKAIIjaQBgYR">via GIPHY</a></p>
+https://media.giphy.com/media/RLPh41DKAIIjaQBgYR/giphy.gif
+
+
 
 
 ### Reflection
